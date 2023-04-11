@@ -116,6 +116,40 @@
 			background: $color-main;
 		}
 	}
+	&.is-back{
+		&:after{
+			content:'';
+			background: url('/assets/img/icon-arrow-wh.svg') no-repeat;
+			background-size: cover;
+			width: 16 * $vp;
+			height: 9 * $vp;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 20 * $vp;
+			margin: auto;
+			z-index:15;
+			transform:rotate(90deg);
+		}
+	}
+	&.is-edit{
+		span{
+			padding-left: 15 * $vp;
+		}
+		&:after{
+			content:'';
+			background: url('/assets/img/icon-editor-wh.svg') no-repeat;
+			background-size: cover;
+			width: 21 * $vp;
+			height: 17 * $vp;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 20 * $vp;
+			margin: auto;
+			z-index:15;
+		}
+	}
 }
 .search-col{
 	display: flex;

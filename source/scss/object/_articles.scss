@@ -101,9 +101,14 @@
 	}
 }
 .singleBody{
-	padding: 30 * $vp;
+	padding: 30 * $vp 30 * $vp 0 30 * $vp;
+	margin: 0 0 0 auto;
+	&.is-open{
+		width: calc(100% - #{270 * $vp});
+	}
 	.single-base{
 		display: flex;
+		margin-bottom: 30 * $vp;
 		.base-image{
 			width: 215 * $vp;
 			height: 215 * $vp;
@@ -116,6 +121,108 @@
 				border: 1px solid $color-lblue;
 			}
 		}
+		.base-text{
+			width: calc(100% - #{240 * $vp});
+			.number{
+				font-size: 12 * $vp;
+				color: $color-gray;
+			}
+			.name{
+				font-weight: 700;
+				display: flex;
+				align-items: center;
+				font-size: 29 * $vp;
+				margin:25 * $vp 0 10 * $vp 0;
+				a{
+					display: block;
+					margin-left: 10 * $vp;
+				}
+			}
+			.initial{
+				font-size: 14 * $vp;
+				color: $color-gray;
+			}
+			.staff-detail{
+				margin-top: 25 * $vp;
+				color: $color-gray;
+				li{
+					display: flex;
+					align-items: center;
+					margin-bottom: 7 * $vp;
+					i{
+						display: block;
+						width: 20 * $vp;
+						margin-right: 10 * $vp;
+					}
+				}
+			}
+		}
+	}
+	.single-info{
+		border:1px solid $color-lblue;
+		border-radius:5 * $vp;
+		margin-bottom: 30 * $vp;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		h2{
+			font-size: 22 * $vp;
+			font-weight: 700;
+			color: $color-sub;
+			background:$color-lblue;
+			border-radius:5 * $vp 5 * $vp 0 0;
+			padding: 20 * $vp 30 * $vp;
+		}
+		.single-info__inner{
+			padding: 30 * $vp;
+		}
+		.info-list{
+			margin-bottom: -15 * $vp;
+			li{
+				margin-bottom: 15 * $vp;
+				display: flex;
+				line-height: 1.8;
+				h3{
+					width: 200 * $vp;
+					flex-shrink:0;
+				}
+			}
+		}
+		.info-block{
+			display: flex;
+			line-height: 1.8;
+			flex-wrap:wrap;
+			dt{
+				width: 200 * $vp;
+				flex-shrink:0;
+			}
+			dd{
+				width: calc(100% - #{200 * $vp});
+				margin: 0 0 0 auto;
+				ul{
+					li{
+						margin-bottom: 15 * $vp;
+						display: flex;
+						align-items: center;
+						span{
+							&:not(:first-child){
+								margin-left: 1em;
+							}
+						}
+					}
+				}
+				&:not(:last-child){
+					border-bottom: 1px solid $color-lblue;
+					margin-bottom: 15 * $vp;
+				}
+			}
+		}
+	}
+}
+.toList{
+	margin: 60 * $vp 0 30 * $vp 0;
+	.is-small{
+		margin: 0 auto;
 	}
 }
 .parts-block{
