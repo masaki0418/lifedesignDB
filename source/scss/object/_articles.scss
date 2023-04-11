@@ -1,2 +1,129 @@
-.p-articles {
+.login{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: calc(100svh - #{70 * $vp});
+	.loginBox{
+		width: 720 * $vp;
+		margin: 0 auto;
+		border-radius:10 * $vp;
+		padding: 50 * $vp 30 * $vp;
+		color: #FFF;
+		background: $color-main;
+		box-shadow: 4px 5px 15 * $vp 0px rgba(0, 0, 0, 0.16);
+		h1{
+			text-align: center;
+			border-bottom: 1px solid #fff;
+			font-size: 20 * $vp;
+			font-weight: 700;
+			padding-bottom: 35 * $vp;
+			margin-bottom: 50 * $vp;
+		}
+		label{
+			display: block;
+			margin-bottom: 15 * $vp;
+		}
+		.loginBox__input{
+			width: 500 * $vp;
+			margin: 0 auto;
+			.inputArea{
+				.input-text{
+					margin-bottom: 10 * $vp;
+				}
+			}
+			.inputLogin{
+				margin-top: 20 * $vp;
+			}
+		}
+	}
+	.logo-pc{}
+	.logo-sp{
+		display: none;
+	}
+}
+.menuBody{
+	width: calc(100% - #{350 * $vp});
+}
+.listBody{
+	padding: 30 * $vp;
+	.staff-list{
+		display: flex;
+		flex-wrap: wrap;
+		margin: -10 * $vp;
+		li{
+			width: calc(100% / 4 - #{20 * $vp});
+			margin: 10 * $vp;
+			border: 1px solid #CADAE2;
+			border-radius:5 * $vp;
+			a{
+				padding: 7 * $vp;
+				text-decoration: none;
+				display: flex;
+				flex-direction: column;
+				&:hover{
+					text-decoration: none;
+					opacity: 0.7;
+				}
+			}
+		}
+		.list-image{
+			text-align: center;
+			margin-bottom: 15 * $vp;
+			img{
+				width: 100%;
+				height: auto;
+				aspect-ratio:1 / 1;
+				object-fit:cover;
+				border-radius:5 * $vp;
+			}
+		}
+		.list-text{
+			color: #707070;
+			.number{
+				font-size: 12 * $vp;
+				margin-bottom: 20 * $vp;
+			}
+			h3{
+				font-weight: 700;
+				font-size: 21 * $vp;
+				margin-bottom: 10 * $vp;
+				color: $color-black;
+			}
+			.initial{
+				margin-bottom: 30 * $vp;
+			}
+			p{
+				line-height: 1.6;
+			}
+		}
+	}
+}
+.singleBody{
+	padding: 30 * $vp;
+	.single-base{
+		display: flex;
+		.base-image{
+			width: 215 * $vp;
+			height: 215 * $vp;
+			margin-right: 25 * $vp;
+			img{
+				width: 100%;
+				height: 215 * $vp;
+				object-fit:cover;
+				border-radius:5 * $vp;
+				border: 1px solid $color-lblue;
+			}
+		}
+	}
+}
+.parts-block{
+	background: #F4F4F4;
+	width: 100%;
+	height: 100%;
+	padding: 60 * $vp 0;
+	a{
+		margin-bottom: 30* $vp;
+	}
 }

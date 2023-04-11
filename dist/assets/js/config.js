@@ -1,1 +1,1 @@
-jQuery(function(n){});
+jQuery((function(i){i(".list-office .parent").on("click",(function(){i(this).next().slideToggle(),i(this).toggleClass("active")}))}));

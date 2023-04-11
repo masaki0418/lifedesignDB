@@ -1,0 +1,311 @@
+.menuHeader{
+	width: 350 * $vp;
+	background: $color-main;
+	padding: 40 * $vp 20 * $vp;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	a{
+		color: #FFF;
+		text-decoration: none;
+		&:hover{
+			text-decoration: none;
+			opacity: .7;
+		}
+	}
+	h1{
+		text-align: center;
+		width: 265 * $vp;
+		margin: 0 auto 30 * $vp auto;
+		font-weight: 700;
+		font-size: 20 * $vp;
+		label{
+			display: block;
+		}
+		span{
+			display: block;
+			text-align: right;
+		}
+	}
+	.headerBtn{
+		border-top: 1px solid #fff;
+		padding-top: 50 * $vp;
+		margin-bottom: 35 * $vp;
+		a{
+			margin-bottom: 10 * $vp;
+		}
+	}
+	.headerSearch{
+		margin-bottom: 30 * $vp;
+	}
+	.headerCategory{
+		.list-office{
+			margin: -12.5 * $vp -20 * $vp;
+			> li{
+				font-size: 20 * $vp;
+				> a, > span{
+					display: flex;
+					padding: 12.5 * $vp 20 * $vp;
+					&.active{
+						font-weight: 700;
+						background: $color-xlblue;
+						color: $color-sub;
+						font-weight: 700;
+						&:before{
+							background: url('/assets/img/icon-office-blue.svg') no-repeat;
+						}
+					}
+					&:before{
+						content:'';
+						background: url('/assets/img/icon-office-wh.svg') no-repeat;
+						background-size: cover;
+						width: 15 * $vp;
+						height: 20 * $vp;
+						margin-right: 15 * $vp;
+					}
+				}
+				
+			}
+			.list-nest{
+				background: $color-xlblue;
+				display: none;
+				a{
+					color: $color-sub;
+				}
+				> ul{
+					padding: 0 20 * $vp 10 * $vp 50 * $vp;
+					> li{
+						border-bottom: 1px solid $color-sub;
+						color: $color-sub;
+						font-size: 18 * $vp;
+						&:last-child{
+							border-bottom: 0;
+						}
+						> span{
+							display: flex;
+							padding: 20 * $vp 0 20 * $vp 20 * $vp;
+							&.active{
+								font-weight: 700;
+								position: relative;
+								&:before{
+									content:'';
+									background: url('/assets/img/icon-marker-blue.svg') no-repeat;
+									background-size: 100%;
+									width: 7.5 * $vp;
+									height: 12.5 * $vp;
+									position: absolute;
+									top: 0;
+									bottom: 0;
+									left: 0;
+									margin: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+			.nest-block{
+				width: 270 * $vp;
+				height: calc(100% - #{80 * $vp});
+				background: $color-xlblue;
+				padding: 25 * $vp;
+				position: absolute;
+				top: 80 * $vp;
+				left: 350 * $vp;
+				display: none;
+				.is-small{
+					width: 220 * $vp;
+					height: 40 * $vp;
+					padding: 0;
+					margin-bottom: 20 * $vp;
+				}
+				.member-list{
+					li{
+						margin-bottom: 10 * $vp;
+					}
+					a{
+						display: flex;
+						align-items: center;
+					}
+					.list-image{
+						width: 50 * $vp;
+						margin-right: 10 * $vp;
+						img{
+							width: 100%;
+							height: 50 * $vp;
+							object-fit:cover;
+							border: 1px solid #C5DBE3;
+							border-radius:5 * $vp;
+						}
+					}
+					.list-text{
+						width: calc(100% - #{60 * $vp});
+						.number{
+							color: #9EA5B5;
+							font-size: 12 * $vp;
+							display: block;
+							margin-bottom: 5 * $vp;
+						}
+						.name{
+							font-size: 18 * $vp;
+							color: $color-black;
+						}
+					}
+				}
+			}
+		}
+		.list-exit{
+			padding-top: 20px;
+			border-top: 1px solid rgba(255,255,255,.3);
+			margin: 20 * $vp 0;
+			li{
+				display: flex;
+				align-items: center;
+				font-size: 20 * $vp;
+				&:before{
+					content:'';
+					background: url('/assets/img/icon-user-wh.svg') no-repeat;
+					background-size: cover;
+					width: 15 * $vp;
+					height: 17 * $vp;
+					margin-right: 15 * $vp;
+				}
+			}
+		}
+	}
+	.headerLogout{
+		border-top: 1px solid #fff;
+		padding: 25 * $vp 0;
+		margin: auto 0 0 0;
+		.is-small{
+			margin: 0 auto;
+		}
+	}
+}
+.menuTtl{
+	width: 100%;
+	height: 80 * $vp;
+	display: flex;
+	align-items: center;
+	background: #FFF;
+	padding: 0 30 * $vp;
+	border-bottom: 1px solid #C5DBE3;
+	h1{
+		color: $color-sub;
+		font-weight: 700;
+		font-size: 22 * $vp;
+	}
+	h2{
+		display: flex;
+		align-items: center;
+		padding-left: 25 * $vp;
+		color: #C5DBE3;
+		font-weight: 700;
+		font-size: 18 * $vp;
+		margin-right: 25 * $vp;
+		span{
+			display: flex;
+			margin-left: 25 * $vp;
+		}
+		&:before{
+			content:'';
+			width: 1px;
+			height: 18 * $vp;
+			background: #C5DBE3;
+			display: block;
+		}
+	}
+	.nav-submit{
+		width: 155 * $vp;
+		margin: 0 0 0 auto;
+		.is-small{
+			width: 100%;
+		}
+	}
+}
+.meneNavi{
+	background: #E7EEF0;
+	padding: 20 * $vp 30 * $vp;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10 * $vp;
+	.nav-search{
+		display: flex;
+		border: 1px solid #C5DBE3;
+		background: #fff;
+		border-radius:5 * $vp;
+		width: 345 * $vp;
+		height: 50 * $vp;
+		display: flex;
+		align-items: center;
+		margin-right: 10 * $vp;
+		.input-wh{
+			width: 295 * $vp;
+			padding-left: 25 * $vp;
+			height: 50 * $vp;
+			display: flex;
+			align-items: center;
+			&::placeholder{
+				font-weight: 700;
+				color: #DADCE2;
+			}
+		}
+		.btn-search-wh{
+			width: 50 * $vp;
+			height: 50 * $vp;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.nav-select{
+		width: 180 * $vp;
+		overflow: hidden;
+		margin-right: 10 * $vp;
+		position: relative;
+		background: #FFF;
+		border-radius:5 * $vp;
+		border: 1px solid #C5DBE3;
+		transition: .3s;
+		&:after{
+			content:'';
+			background: url('/assets/img/icon-arrow-blue.svg') no-repeat;
+			background-size: cover;
+			width: 16 * $vp;
+			height: 9 * $vp;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 20 * $vp;
+			margin: auto;
+			z-index:15;
+		}
+		&:hover{
+			background: $color-sub;
+			&:after{
+				background: url('/assets/img/icon-arrow-wh.svg') no-repeat;
+			}
+			.selectBox{
+				color: #FFF;
+			}
+		}
+		.selectBox{
+			width: 100%;
+			height: 50 * $vp;
+			cursor: pointer;
+			text-overflow: ellipsis;
+			border: none;
+			outline: none;
+			background: transparent;
+			background-image: none;
+			box-shadow: none;
+			-webkit-appearance: none;
+			appearance: none;
+			padding: 0 20 * $vp;
+			text-align: center;
+			font-weight: 700;
+			color: $color-sub;
+		}
+		
+	}
+}

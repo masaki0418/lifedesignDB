@@ -1,3 +1,7 @@
-footer {
-	background: #f00;
+.commonFooter{
+	padding: 20 * $vp;
+	color: $color-sub;
+	font-size: 15 * $vp;
+	text-align: center;
+	letter-spacing: 1px;
 }
