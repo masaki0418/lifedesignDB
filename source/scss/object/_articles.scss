@@ -185,6 +185,15 @@
 				font-size: 12 * $vp;
 				margin: 0 0 0 auto;
 			}
+			.is-btn{
+				width: 120 * $vp;
+				margin: 0 0 0 auto;
+				.is-small{
+					width: 120 * $vp;
+					height: 37 * $vp;
+					font-size: 14 * $vp;
+				}
+			}
 		}
 		.single-info__inner{
 			padding: 30 * $vp;
@@ -242,6 +251,13 @@
 				display: flex;
 				flex-grow:1;
 			}
+			.form-file{
+				display: flex;
+				align-items: center;
+				p{
+					margin-left: 1em;
+				}
+			}
 			.form-select{
 				overflow: hidden;
 				position: relative;
@@ -255,7 +271,7 @@
 					width: 125 * $vp;
 					
 				}
-				&.is-short{
+				&.is-mid{
 					flex-grow:initial;
 					width: 330 * $vp;
 				}
@@ -295,6 +311,140 @@
 		background:$color-lyellow;
 		&.form-mid{
 			width: 330 * $vp;
+		}
+	}
+	input[type="file"]{
+		display: none;
+	}
+	.resume-complete{
+		background: #E9EAEE;
+		margin: 50 * $vp 20 * $vp 100 * $vp 20 * $vp;
+		padding: 70 * $vp 50 * $vp;
+		color:$color-gray;
+		border-radius:5 * $vp;
+		border:1px solid $color-lblue;
+		h2{
+			font-size: 30 * $vp;
+			font-weight: 700;
+			text-align: center;
+			color: $color-sub;
+			margin-bottom: 40 * $vp;
+		}
+		p{
+			font-size: 20 * $vp;
+			margin-bottom: 30 * $vp;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.staffForm{
+	input[type="text"], textarea{
+		border-radius:3 * $vp;
+		border:1px solid $color-lblue;
+		background:#fff;
+		padding: 7 * $vp 15 * $vp;
+		min-width: 350 * $vp;
+		&.is-full{
+			width: 100%;
+		}
+	}
+	input[type="file"]{
+		display: none;
+	}
+	.single-info{
+		li > span{
+			flex-grow:1;
+		}
+		.is-column{
+			display: flex;
+			align-items: center;
+			flex-grow:1;
+		}
+		.form-select{
+			overflow: hidden;
+			position: relative;
+			background: #FFF;
+			border-radius:3 * $vp;
+			border: 1px solid #C5DBE3;
+			padding: 10 * $vp 15 * $vp;
+			background:#fff;
+			&.is-short{
+				flex-grow:initial;
+				width: 125 * $vp;
+				margin-right: 1em;
+			}
+			&.is-mid{
+				flex-grow:initial;
+				width: 330 * $vp;
+			}
+			&:after{
+				content:'';
+				background: url('/assets/img/icon-arrow-blue.svg') no-repeat;
+				background-size: cover;
+				width: 13 * $vp;
+				height: 7 * $vp;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 20 * $vp;
+				margin: auto;
+				z-index:15;
+			}
+			select{
+				width: 100%;
+				cursor: pointer;
+				text-overflow: ellipsis;
+				border: none;
+				outline: none;
+				background: transparent;
+				background-image: none;
+				box-shadow: none;
+				-webkit-appearance: none;
+				appearance: none;
+			}
+		}
+		.form-date{
+			margin-left: 1em;
+			border: 1px solid $color-lblue;
+			padding: 10 * $vp 15 * $vp;
+			width: 200 * $vp;
+			border: 1px solid #C5DBE3;
+			input[type="date"]{
+				position: relative;
+				padding-left: 1.5em;
+				&::-webkit-calendar-picker-indicator{
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					width: auto;
+					height: auto;
+					background: transparent;
+					z-index: 1;
+				}
+				&:after{
+					content:'';
+					background: url('/assets/img/icon-calendar.svg') no-repeat;
+					width: 15.75 * $vp;
+					height: 18 * $vp;
+					background-size: cover;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+				}
+			}
+		}
+		.form-file{
+			display: flex;
+			align-items: center;
+			p{
+				margin-left: 1em;
+			}
 		}
 	}
 }
