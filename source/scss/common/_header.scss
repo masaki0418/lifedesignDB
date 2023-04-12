@@ -27,6 +27,16 @@
 			text-align: right;
 		}
 	}
+	.headerResume{
+		figure{
+			text-align: center;
+			margin-bottom: 35 * $vp;
+		}
+		p{
+			font-weight: 700;
+			letter-spacing:normal;
+		}
+	}
 	.headerBtn{
 		border-top: 1px solid #fff;
 		padding-top: 50 * $vp;
