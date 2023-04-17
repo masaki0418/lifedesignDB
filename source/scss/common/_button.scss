@@ -23,11 +23,19 @@
 		width: 500 * $vp;
 		height: 80 * $vp;
 		font-size: 20 * $vp;
+		@include mediaquery-md {
+			width: 100%;
+			height: 60 * $vp;
+			font-size: 16 * $vp;
+		}
 	}
 	&.is-medium{
 		width: 310 * $vp;
 		height: 60 * $vp;
 		font-size: 20 * $vp;
+		@include mediaquery-md {
+			width: 100%;
+		}
 	}
 	&.is-small{
 		width: 180 * $vp;
@@ -206,6 +214,10 @@
 	padding: 0 20 * $vp;
 	background: #C5DBE3;
 	color: $color-black;
+	@include mediaquery-md {
+		width: 100%;
+		height: 45 * $vp;
+	}
 	&:focus{
 		background: $color-lyellow;
 		color: $color-black;

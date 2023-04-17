@@ -5,6 +5,12 @@
 	justify-content: center;
 	width: 100%;
 	height: calc(100svh - #{70 * $vp});
+	@include mediaquery-md {
+		padding: 0 20 * $vp;
+		position: relative;
+		height: calc(100vh - #{70 * $vp});
+		height: calc(100svh - #{70 * $vp});
+	}
 	.loginBox{
 		width: 720 * $vp;
 		margin: 0 auto;
@@ -13,6 +19,10 @@
 		color: #FFF;
 		background: $color-main;
 		box-shadow: 4px 5px 15 * $vp 0px rgba(0, 0, 0, 0.16);
+		@include mediaquery-md {
+			width: 100%;
+			padding: 30 * $vp 20 * $vp;
+		}
 		h1{
 			text-align: center;
 			border-bottom: 1px solid #fff;
@@ -20,6 +30,12 @@
 			font-weight: 700;
 			padding-bottom: 35 * $vp;
 			margin-bottom: 50 * $vp;
+			@include mediaquery-md {
+				margin-top: -150 * $vp;
+				color: $color-main;
+				border-bottom: 0;
+				margin-bottom: 30 * $vp;
+			}
 		}
 		label{
 			display: block;
@@ -28,6 +44,9 @@
 		.loginBox__input{
 			width: 500 * $vp;
 			margin: 0 auto;
+			@include mediaquery-md {
+				width: 100%;
+			}
 			.inputArea{
 				.input-text{
 					margin-bottom: 10 * $vp;
@@ -45,18 +64,31 @@
 }
 .menuBody{
 	width: calc(100% - #{350 * $vp});
+	@include mediaquery-md {
+		width: 100%;
+	}
 }
 .listBody{
 	padding: 30 * $vp;
+	@include mediaquery-md {
+		padding: 15 * $vp;
+	}
 	.staff-list{
 		display: flex;
 		flex-wrap: wrap;
 		margin: -10 * $vp;
+		@include mediaquery-md {
+			margin: -5 * $vp;
+		}
 		li{
 			width: calc(100% / 4 - #{20 * $vp});
 			margin: 10 * $vp;
 			border: 1px solid #CADAE2;
 			border-radius:5 * $vp;
+			@include mediaquery-md {
+				width: calc(50% - #{10 * $vp});
+				margin: 5 * $vp;
+			}
 			a{
 				padding: 7 * $vp;
 				text-decoration: none;
@@ -84,18 +116,32 @@
 			.number{
 				font-size: 12 * $vp;
 				margin-bottom: 20 * $vp;
+				@include mediaquery-md {
+					font-size: 10 * $vp;
+					margin-bottom: 10 * $vp;
+				}
 			}
 			h3{
 				font-weight: 700;
 				font-size: 21 * $vp;
 				margin-bottom: 10 * $vp;
 				color: $color-black;
+				@include mediaquery-md {
+					font-size: 20 * $vp;
+				}
 			}
 			.initial{
 				margin-bottom: 30 * $vp;
+				@include mediaquery-md {
+					font-size: 12 * $vp;
+					margin-bottom: 15 * $vp;
+				}
 			}
 			p{
 				line-height: 1.6;
+				@include mediaquery-md {
+					font-size: 13 * $vp;
+				}
 			}
 		}
 	}
@@ -103,8 +149,15 @@
 .singleBody{
 	padding: 30 * $vp 30 * $vp 0 30 * $vp;
 	margin: 0 0 0 auto;
+	@include mediaquery-md {
+		padding: 15 * $vp;
+		margin: 0;
+	}
 	&.is-open{
 		width: calc(100% - #{270 * $vp});
+		@include mediaquery-md {
+			width: 100%;
+		}
 	}
 	.single-base{
 		display: flex;
@@ -114,12 +167,20 @@
 			height: 215 * $vp;
 			margin-right: 25 * $vp;
 			position: relative;
+			@include mediaquery-md {
+				width: 110 * $vp;
+				height: 110 * $vp;
+			}
 			img{
 				width: 100%;
 				height: 215 * $vp;
 				object-fit:cover;
 				border-radius:5 * $vp;
 				border: 1px solid $color-lblue;
+				@include mediaquery-md {
+					height: auto;
+					aspect-ratio:1 / 1;
+				}
 			}
 			.form-file{
 				margin: 0 auto;
