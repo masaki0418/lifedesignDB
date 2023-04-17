@@ -170,6 +170,8 @@
 			@include mediaquery-md {
 				width: 110 * $vp;
 				height: 110 * $vp;
+				margin-right: 10 * $vp;
+				flex-shrink: 0;
 			}
 			img{
 				width: 100%;
@@ -190,16 +192,33 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					position: static;
+					margin-top: 10 * $vp;
+					p{
+						font-size: 10 * $vp;
+						margin-left: 0;
+					}
+				}
 				.is-small{
 					margin: 0 auto 10 * $vp auto;
+					@include mediaquery-md {
+						margin-bottom:5 * $vp;
+					}
 				}
 			}
 		}
 		.base-text{
 			width: calc(100% - #{240 * $vp});
+			@include mediaquery-md {
+				width: calc(100% - #{120 * $vp});
+			}
 			.number{
 				font-size: 12 * $vp;
 				color: $color-gray;
+				@include mediaquery-md {
+					font-size: 10 * $vp;
+				}
 			}
 			.name{
 				font-weight: 700;
@@ -207,6 +226,10 @@
 				align-items: center;
 				font-size: 29 * $vp;
 				margin:25 * $vp 0 10 * $vp 0;
+				@include mediaquery-md {
+					font-size: 20 * $vp;
+					margin-top: 10 * $vp;
+				}
 				a{
 					display: block;
 					margin-left: 10 * $vp;
@@ -215,18 +238,31 @@
 			.initial{
 				font-size: 14 * $vp;
 				color: $color-gray;
+				@include mediaquery-md {
+					font-size: 12 * $vp;
+				}
 			}
 			.staff-detail{
 				margin-top: 25 * $vp;
 				color: $color-gray;
+				@include mediaquery-md {
+					margin-top: 15 * $vp;
+				}
 				li{
 					display: flex;
 					align-items: center;
 					margin-bottom: 7 * $vp;
+					@include mediaquery-md {
+						font-size: 12 * $vp;
+						margin-bottom: 4 * $vp;
+					}
 					i{
 						display: block;
 						width: 20 * $vp;
 						margin-right: 10 * $vp;
+						@include mediaquery-md {
+							width: 12 * $vp;
+						}
 					}
 				}
 			}
@@ -248,6 +284,10 @@
 			padding: 20 * $vp 30 * $vp;
 			display: flex;
 			align-items: center;
+			@include mediaquery-md {
+				font-size: 14 * $vp;
+				padding: 15 * $vp 20 * $vp;
+			}
 			.is-req{
 				width: 55 * $vp;
 				height: 25 * $vp;
@@ -262,15 +302,25 @@
 			.is-btn{
 				width: 120 * $vp;
 				margin: 0 0 0 auto;
+				@include mediaquery-md {
+					width: 100 * $vp;
+				}
 				.is-small{
 					width: 120 * $vp;
 					height: 37 * $vp;
 					font-size: 14 * $vp;
+					@include mediaquery-md {
+						width: 100%;
+						font-size: 12 * $vp;
+					}
 				}
 			}
 		}
 		.single-info__inner{
 			padding: 30 * $vp;
+			@include mediaquery-md {
+				padding: 15 * $vp;
+			}
 		}
 		.info-list{
 			margin-bottom: -15 * $vp;
@@ -278,9 +328,16 @@
 				margin-bottom: 15 * $vp;
 				display: flex;
 				line-height: 1.8;
+				@include mediaquery-md {
+					font-size: 12 * $vp;
+				}
 				h3{
 					width: 200 * $vp;
 					flex-shrink:0;
+					@include mediaquery-md {
+						width: 90 * $vp;
+						letter-spacing: normal;
+					}
 				}
 			}
 		}
@@ -288,21 +345,39 @@
 			display: flex;
 			line-height: 1.8;
 			flex-wrap:wrap;
+			@include mediaquery-md {
+				line-height: 1.5;
+				font-size: 12 * $vp;
+			}
 			dt{
 				width: 190 * $vp;
 				flex-shrink:0;
+				@include mediaquery-md {
+					width: 90 * $vp;
+					letter-spacing: normal;
+				}
 			}
 			dd{
 				width: calc(100% - #{200 * $vp});
 				margin: 0 0 0 auto;
+				@include mediaquery-md {
+					width: calc(100% - #{100 * $vp});
+				}
 				ul{
 					li{
 						margin-bottom: 15 * $vp;
 						display: flex;
 						align-items: center;
+						-webkit-flex-wrap: wrap;
+						    -ms-flex-wrap: wrap;
+						        flex-wrap: wrap;
 						h3{
 							width: 170 * $vp;
 							flex-shrink:0;
+							@include mediaquery-md {
+								width: auto;
+								margin-right: 10 * $vp;
+							}
 						}
 						h4{
 							margin-right: 1em;
@@ -321,18 +396,36 @@
 .resume{
 	.resume-form{
 		.info-list{
+			li{
+				@include mediaquery-md {
+					flex-direction: column;
+					&.is-float{
+						flex-direction: row;
+					}
+				}
+			}
 			h3{
 				padding-top: 5 * $vp;
+				@include mediaquery-md {
+					width: 100%;
+				}
 			}
 			span{
 				display: flex;
 				flex-grow:1;
+				@include mediaquery-md {
+					width: 100%;
+				}
 			}
 			.form-file{
 				display: flex;
 				align-items: center;
 				p{
 					margin-left: 1em;
+					@include mediaquery-md {
+						font-size: 10 * $vp;
+						letter-spacing: normal;
+					}
 				}
 			}
 			.form-select{
@@ -346,11 +439,16 @@
 				&.is-short{
 					flex-grow:initial;
 					width: 125 * $vp;
-					
+					@include mediaquery-md {
+						width: 100%;
+					}
 				}
 				&.is-mid{
 					flex-grow:initial;
 					width: 330 * $vp;
+					@include mediaquery-md {
+						width: 100%;
+					}
 				}
 				&:after{
 					content:'';
@@ -388,6 +486,9 @@
 		background:$color-lyellow;
 		&.form-mid{
 			width: 330 * $vp;
+			@include mediaquery-md {
+				width: 100%;
+			}
 		}
 	}
 	input[type="file"]{
@@ -400,16 +501,26 @@
 		color:$color-gray;
 		border-radius:5 * $vp;
 		border:1px solid $color-lblue;
+		@include mediaquery-md {
+			padding: 30 * $vp 25 * $vp;
+		}
 		h2{
 			font-size: 30 * $vp;
 			font-weight: 700;
 			text-align: center;
 			color: $color-sub;
 			margin-bottom: 40 * $vp;
+			@include mediaquery-md {
+				font-size: 17 * $vp;
+				margin-bottom: 25 * $vp;
+			}
 		}
 		p{
 			font-size: 20 * $vp;
 			margin-bottom: 30 * $vp;
+			@include mediaquery-md {
+				font-size: 14 * $vp;
+			}
 			&:last-child{
 				margin-bottom: 0;
 			}
@@ -417,23 +528,76 @@
 	}
 }
 .staffForm{
+	padding-bottom: 60 * $vp;
+	.info-list{
+		@include mediaquery-md {
+			li{
+				flex-direction: column;
+			}
+		}
+	}
+	.single-info{
+		.info-block{
+			@include mediaquery-md {
+				flex-direction: column;
+				dt{
+					width: 100%;
+				}
+				dd{
+					width: 100%;
+					ul{
+						li{
+							flex-direction: column;
+							align-items: flex-start;
+							.is-column{
+								h3{
+									width: 100%;
+								}
+								.form-select{
+									margin-bottom: 0;
+								}
+								h4{
+									width: 100%;
+									margin-top: 10 * $vp;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	input{
+		margin: 5 * $vp 0;
+	}
 	input[type="text"], textarea{
 		border-radius:3 * $vp;
 		border:1px solid $color-lblue;
 		background:#fff;
 		padding: 7 * $vp 15 * $vp;
 		min-width: 350 * $vp;
+		@include mediaquery-md {
+			width: 100%;
+			min-width: initial;
+			min-width: auto;
+		}
 		&.is-full{
 			width: 100%;
 		}
 		&.is-mid{
 			min-width: 215 * $vp;
+			@include mediaquery-md {
+				min-width: auto;
+			}
 		}
 	}
 	input[type="text"]{
 		height: 40 * $vp;
 		display: flex;
 		align-items: center;
+		@include mediaquery-md {
+			height: 30 * $vp;
+		}
 	}
 	input[type="file"]{
 		display: none;
@@ -441,14 +605,31 @@
 	.single-info{
 		li > span{
 			flex-grow:1;
+			@include mediaquery-md {
+				width: 100%;
+			}
 		}
 		.is-column{
 			display: flex;
 			flex-wrap:wrap;
 			flex-grow:1;
 			align-items: center;
+			@include mediaquery-md {
+				flex-direction: column;
+				align-items: flex-start;
+			}
 			span{
 				margin-right: 1em;
+				display: flex;
+				align-items: flex-end;
+				input{
+					margin-right: 10 * $vp;
+				}
+			}
+			@include mediaquery-md {
+				.form-select{
+					margin-bottom: 10 * $vp;
+				}
 			}
 		}
 		.is-wrap{
@@ -481,13 +662,22 @@
 		background:#fff;
 		width: 170 * $vp;
 		margin-right: 1em;
+		@include mediaquery-md {
+			height: 30 * $vp;
+		}
 		&.is-short{
 			flex-grow:initial;
 			width: 125 * $vp;
+			@include mediaquery-md {
+				width: 80 * $vp;
+			}
 		}
 		&.is-mid{
 			flex-grow:initial;
 			width: 330 * $vp;
+			@include mediaquery-md {
+				width: 100%;
+			}
 		}
 		&:after{
 			content:'';
@@ -584,6 +774,10 @@
 					position: absolute;
 					top: 5 * $vp;
 					left: 0;
+					@include mediaquery-md {
+						width: 15 * $vp;
+						height: 15 * $vp;
+					}
 				}
 				&:after{
 					content:'';
@@ -597,6 +791,12 @@
 					left: 5 * $vp;
 					margin: auto;
 					opacity: 0;
+					@include mediaquery-md {
+						width: 7 * $vp;
+						height: 7 * $vp;
+						top: 4 * $vp;
+						left: 4 * $vp;
+					}
 				}
 			}
 			
@@ -610,6 +810,9 @@
 }
 .toList{
 	margin: 60 * $vp 0 30 * $vp 0;
+	@include mediaquery-md {
+		padding-bottom: 60 * $vp;
+	}
 	.is-small{
 		margin: 0 auto;
 	}

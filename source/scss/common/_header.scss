@@ -1,17 +1,29 @@
 .menuHeader{
 	width: 350 * $vp;
-	background: $color-main;
-	padding: 40 * $vp 20 * $vp;
-	color: #FFF;
-	display: flex;
-	flex-direction: column;
 	@include mediaquery-md {
 		width: 100%;
 	}
 	.menuHeader-inner{
+		color: #FFF;
+		display: flex;
+		flex-direction: column;
+		padding: 40 * $vp 20 * $vp;
+		background: $color-main;
 		@include mediaquery-md {
 			display: none;
 			opacity: 0;
+			&.active{
+				display: flex;
+				flex-direction: column;
+				z-index:1000;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				overflow-y: scroll;
+				top: 0;
+				left: 0;
+				opacity: 1;
+			}
 		}
 	}
 	a{
@@ -23,11 +35,35 @@
 		}
 	}
 	h1{
-		text-align: center;
-		width: 265 * $vp;
-		margin: 0 auto 30 * $vp auto;
-		font-weight: 700;
-		font-size: 20 * $vp;
+		&.is-pc{
+			text-align: center;
+			width: 265 * $vp;
+			margin: 0 auto 30 * $vp auto;
+			font-weight: 700;
+			font-size: 20 * $vp;
+		}
+		&.is-sp{
+			display: none;
+			@include mediaquery-md {
+				width: 100%;
+				color: $color-main;
+				height: 60 * $vp;
+				display: flex;
+				align-items: center;
+				padding: 0 15 * $vp;
+			}
+			
+			a{
+				display: flex;
+				align-items: center;
+				color: $color-main;
+				font-weight: 700;
+				font-size: 12 * $vp;
+			}
+			img{
+				margin-right: 1em;
+			}
+		}
 		label{
 			display: block;
 		}
@@ -212,6 +248,10 @@
 		margin: auto 0 0 0;
 		.is-small{
 			margin: 0 auto;
+			@include mediaquery-md {
+				width: 200 * $vp;
+				height: 60 * $vp;
+			}
 		}
 	}
 }
@@ -226,10 +266,17 @@
 	position:sticky;
 	top: 0;
 	z-index:100;
+	@include mediaquery-md {
+		height: 60 * $vp;
+		padding: 0 15 * $vp;
+	}
 	h1{
 		color: $color-sub;
 		font-weight: 700;
 		font-size: 22 * $vp;
+		@include mediaquery-md {
+			font-size: 18 * $vp;
+		}
 	}
 	h2{
 		display: flex;
@@ -254,6 +301,10 @@
 	.nav-submit{
 		width: 155 * $vp;
 		margin: 0 0 0 auto;
+		@include mediaquery-md {
+			width: 100* $vp;
+			margin: 0 auto 0 10 * $vp;
+		}
 		.is-small{
 			width: 100%;
 		}
@@ -371,6 +422,9 @@
 }
 .resumeChart{
 	padding: 30 * $vp;
+	@include mediaquery-md {
+		padding: 15 * $vp;
+	}
 	ol{
 		display: flex;
 		align-items: center;
@@ -389,6 +443,11 @@
 			font-weight: 700;
 			color: $color-sub;
 			position: relative;
+			@include mediaquery-md {
+				font-size: 12 * $vp;
+				height: 30 * $vp;
+				margin-right: 20 * $vp;
+			}
 			&:before{
 				content:'';
 				width: 0;
@@ -399,6 +458,10 @@
 				position: absolute;
 				top: -1px;
 				right: -30 * $vp;
+				@include mediaquery-md {
+					border-width: 15* $vp 0 15* $vp 15* $vp;
+					right: -15 * $vp;
+				}
 			}
 			&:after{
 				content:'';
@@ -412,6 +475,10 @@
 				bottom: 0;
 				right: -28 * $vp;
 				margin: auto;
+				@include mediaquery-md {
+					border-width: 15* $vp 0 15* $vp 15* $vp;
+					right: -14 * $vp;
+				}
 			}
 			&:last-child{
 				margin-right: 0;

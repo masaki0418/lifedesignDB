@@ -41,6 +41,11 @@
 		width: 180 * $vp;
 		height: 50 * $vp;
 		font-size: 16 * $vp;
+		@include mediaquery-md {
+			height: 30 * $vp;
+			width: 100 * $vp;
+			font-size: 12 * $vp;
+		}
 	}
 	&.is-shadow{
 		&:before{
