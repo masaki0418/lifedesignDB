@@ -147,7 +147,7 @@
 						&:last-child{
 							border-bottom: 0;
 						}
-						> span{
+						> a{
 							display: flex;
 							padding: 20 * $vp 0 20 * $vp 20 * $vp;
 							&.active{
@@ -167,6 +167,17 @@
 								}
 							}
 						}
+						&.is-child{
+							@include mediaquery-lg {
+								&:hover{
+									> .nest-block{
+										opacity: 1;
+										visibility: visible;
+									}
+								}
+							}
+							
+						}
 					}
 				}
 			}
@@ -175,10 +186,13 @@
 				height: calc(100% - #{80 * $vp});
 				background: $color-xlblue;
 				padding: 25 * $vp;
-				position: absolute;
+				position: fixed;
 				top: 80 * $vp;
 				left: 350 * $vp;
-				display: none;
+				opacity: 0;
+				visibility: hidden;
+				transition: all .3s;
+				z-index:10;
 				&.is-single{
 					display: block;
 				}
@@ -218,6 +232,69 @@
 						.name{
 							font-size: 18 * $vp;
 							color: $color-black;
+						}
+					}
+				}
+				.member-select{
+					width: 100%;
+					overflow: hidden;
+					margin-bottom: 30 * $vp;
+					position: relative;
+					background: #FFF;
+					border-radius:5 * $vp;
+					border: 1px solid #C5DBE3;
+					transition: .3s;
+					@include mediaquery-md {
+						width: calc(100% / 3 - #{5 * $vp});
+						margin: 0;
+					}
+					&:after{
+						content:'';
+						background: url('/assets/img/icon-arrow-blue.svg') no-repeat;
+						background-size: cover;
+						width: 16 * $vp;
+						height: 9 * $vp;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						right: 20 * $vp;
+						margin: auto;
+						z-index:15;
+						@include mediaquery-md {
+							width: 8 * $vp;
+							height: 4.5 * $vp;
+							right: 10 * $vp;
+						}
+					}
+					&:hover{
+						background: $color-sub;
+						&:after{
+							background: url('/assets/img/icon-arrow-wh.svg') no-repeat;
+						}
+						.selectBox{
+							color: #FFF;
+						}
+					}
+					.selectBox{
+						width: 100%;
+						height: 40 * $vp;
+						cursor: pointer;
+						text-overflow: ellipsis;
+						border: none;
+						outline: none;
+						background: transparent;
+						background-image: none;
+						box-shadow: none;
+						-webkit-appearance: none;
+						appearance: none;
+						padding: 0 20 * $vp;
+						text-align: center;
+						font-weight: 700;
+						color: $color-sub;
+						font-size: 16px;
+						@include mediaquery-md {
+							height: 40 * $vp;
+							font-size: 12 * $vp;
 						}
 					}
 				}
