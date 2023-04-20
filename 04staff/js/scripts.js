@@ -1,3 +1,5 @@
+(function ($, root, undefined) {
+	
 jQuery(function($) {
 	$('.navToggle').click(function() {
     $(this).toggleClass('active');
@@ -25,3 +27,5 @@ jQuery(function($) {
 });
 
 
+
+})(jQuery, this);

@@ -565,6 +565,28 @@
 					}
 				}
 			}
+			.is-nest{
+				position: relative;
+				i{
+					width: 26 * $vp;
+					height: 26 * $vp;
+					display: block;
+					margin: 0 auto;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: -32 * $vp;
+					margin: auto;
+					z-index:10;
+				}
+				> .is-nest-block {
+					display: none;
+					ul{
+						border-bottom: 1px solid $color-lblue;
+						margin-bottom: 15 * $vp;
+					}
+				}
+			}
 		}
 	}
 	input{
@@ -636,6 +658,7 @@
 			display: flex;
 			flex-wrap:wrap;
 			flex-grow:1;
+			flex-direction: column;
 			h4{
 				margin-right: 0.5em;
 			}
@@ -708,8 +731,9 @@
 	}
 	.form-date{
 		border: 1px solid $color-lblue;
-		padding: 10 * $vp 15 * $vp;
+		padding: 0 15 * $vp;
 		width: 200 * $vp;
+		height: 40 * $vp;
 		border: 1px solid #C5DBE3;
 		input[type="date"]{
 			position: relative;

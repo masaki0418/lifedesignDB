@@ -1,3 +1,10 @@
+/*
+	Theme Name: LDS
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block
 }
@@ -525,7 +532,7 @@ p {
 }
 .btn-wh.is-log:after {
   content: '';
-  background: url("/assets/img/icon-logout-blue.svg") no-repeat;
+  background: url("img/icon-logout-blue.svg") no-repeat;
   background-size: cover;
   width: 1.25rem;
   height: 1.0625rem;
@@ -538,7 +545,7 @@ p {
 }
 .btn-wh.is-arrow:after {
   content: '';
-  background: url("/assets/img/icon-arrow-blue.svg") no-repeat;
+  background: url("img/icon-arrow-blue.svg") no-repeat;
   background-size: cover;
   width: 1rem;
   height: .5625rem;
@@ -558,14 +565,14 @@ p {
 }
 .btn-wh:hover.is-log:after {
   content: '';
-  background: url("/assets/img/icon-logout-wh.svg") no-repeat
+  background: url("img/icon-logout-wh.svg") no-repeat
 }
 .btn-wh:hover.is-arrow span {
   background: #3197BC
 }
 .btn-wh:hover.is-arrow:after {
   content: '';
-  background: url("/assets/img/icon-arrow-wh.svg") no-repeat
+  background: url("img/icon-arrow-wh.svg") no-repeat
 }
 .btn-blue {
   background: #056C91;
@@ -581,7 +588,7 @@ p {
 }
 .btn-blue.is-back:after {
   content: '';
-  background: url("/assets/img/icon-arrow-wh.svg") no-repeat;
+  background: url("img/icon-arrow-wh.svg") no-repeat;
   background-size: cover;
   width: 1rem;
   height: .5625rem;
@@ -599,7 +606,7 @@ p {
 }
 .btn-blue.is-edit:after {
   content: '';
-  background: url("/assets/img/icon-editor-wh.svg") no-repeat;
+  background: url("img/icon-editor-wh.svg") no-repeat;
   background-size: cover;
   width: 1.3125rem;
   height: 1.0625rem;
@@ -890,11 +897,11 @@ p {
   font-weight: 700
 }
 .menuHeader .headerCategory .list-office > li > a.active:before, .menuHeader .headerCategory .list-office > li > span.active:before {
-  background: url("/assets/img/icon-office-blue.svg") no-repeat
+  background: url("img/icon-office-blue.svg") no-repeat
 }
 .menuHeader .headerCategory .list-office > li > a:before, .menuHeader .headerCategory .list-office > li > span:before {
   content: '';
-  background: url("/assets/img/icon-office-wh.svg") no-repeat;
+  background: url("img/icon-office-wh.svg") no-repeat;
   background-size: cover;
   width: .9375rem;
   height: 1.25rem;
@@ -937,7 +944,7 @@ p {
 }
 .menuHeader .headerCategory .list-office .list-nest > ul > li > a.active:before {
   content: '';
-  background: url("/assets/img/icon-marker-blue.svg") no-repeat;
+  background: url("img/icon-marker-blue.svg") no-repeat;
   background-size: 100%;
   width: .46875rem;
   height: .78125rem;
@@ -1031,7 +1038,7 @@ p {
 }
 .menuHeader .headerCategory .list-office .nest-block .member-select:after {
   content: '';
-  background: url("/assets/img/icon-arrow-blue.svg") no-repeat;
+  background: url("img/icon-arrow-blue.svg") no-repeat;
   background-size: cover;
   width: 1rem;
   height: .5625rem;
@@ -1053,7 +1060,7 @@ p {
   background: #056C91
 }
 .menuHeader .headerCategory .list-office .nest-block .member-select:hover:after {
-  background: url("/assets/img/icon-arrow-wh.svg") no-repeat
+  background: url("img/icon-arrow-wh.svg") no-repeat
 }
 .menuHeader .headerCategory .list-office .nest-block .member-select:hover .selectBox {
   color: #FFF
@@ -1100,7 +1107,7 @@ p {
 }
 .menuHeader .headerCategory .list-exit li:before {
   content: '';
-  background: url("/assets/img/icon-user-wh.svg") no-repeat;
+  background: url("img/icon-user-wh.svg") no-repeat;
   background-size: cover;
   width: .9375rem;
   height: 1.0625rem;
@@ -1301,7 +1308,7 @@ p {
 }
 .meneNavi .nav-select:after {
   content: '';
-  background: url("/assets/img/icon-arrow-blue.svg") no-repeat;
+  background: url("img/icon-arrow-blue.svg") no-repeat;
   background-size: cover;
   width: 1rem;
   height: .5625rem;
@@ -1323,7 +1330,7 @@ p {
   background: #056C91
 }
 .meneNavi .nav-select:hover:after {
-  background: url("/assets/img/icon-arrow-wh.svg") no-repeat
+  background: url("img/icon-arrow-wh.svg") no-repeat
 }
 .meneNavi .nav-select:hover .selectBox {
   color: #FFF
@@ -2064,7 +2071,7 @@ p {
 }
 .resume .resume-form .info-list .form-select:after {
   content: '';
-  background: url("/assets/img/icon-arrow-blue.svg") no-repeat;
+  background: url("img/icon-arrow-blue.svg") no-repeat;
   background-size: cover;
   width: .8125rem;
   height: .4375rem;
@@ -2377,7 +2384,7 @@ p {
 }
 .staffForm .form-select:after {
   content: '';
-  background: url("/assets/img/icon-arrow-blue.svg") no-repeat;
+  background: url("img/icon-arrow-blue.svg") no-repeat;
   background-size: cover;
   width: .8125rem;
   height: .4375rem;
@@ -2427,7 +2434,7 @@ p {
 }
 .staffForm .form-date input[type="date"]:after {
   content: '';
-  background: url("/assets/img/icon-calendar.svg") no-repeat;
+  background: url("img/icon-calendar.svg") no-repeat;
   width: .98438rem;
   height: 1.125rem;
   background-size: cover;
@@ -2566,4 +2573,193 @@ p {
   content: "";
   clear: both;
   display: block
+}
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
 }
